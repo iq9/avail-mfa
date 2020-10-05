@@ -12,7 +12,7 @@ I felt like the MFA-entry page should be a separate React route. Displaying the 
 
 This required two XHR operations:
 
-1. Verify their creds are valid but **not** login them in yet, because the MFA hasn't passed yet.
+1. Verify their creds are valid but **not** log them in yet, because the MFA hasn't passed yet.
 1. Verify their creds **and** log them in, after MFA has passed. To accomplish this, I used a Query String param called "nologin". When passed to the Rails endpt, it verifies their UN and PW without logging them in.
 
 ### Approach: "Remember Device"
