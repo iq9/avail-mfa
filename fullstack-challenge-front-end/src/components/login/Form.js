@@ -65,7 +65,7 @@ const LoginForm = () => {
 
   return (
     <Stack>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form id="frm-login" onSubmit={handleSubmit(onSubmit)}>
         {errors.password && (
           <Text color="red" pt={2}>
             {errors.password.message}

@@ -36,6 +36,7 @@ const Header = () => {
       direction={["column", "row"]}
       spacing="0"
       alignItems="center"
+      id="nav"
     >
       <Box p="2rem">
         <Link to="/">Home</Link>
