@@ -1,3 +1,6 @@
+![Screen Shot 2020-10-05 at 5 07 41 PM](https://user-images.githubusercontent.com/214047/95132369-ab12f080-072d-11eb-9f1c-986d03bd3521.png)
+![Screen Shot 2020-10-05 at 5 08 18 PM](https://user-images.githubusercontent.com/214047/95132371-abab8700-072d-11eb-9ffa-654f8d3cf05d.png)
+
 ## Avail Full-Stack Engineer Coding Challenge
 
 Your challenged is to implement two-factor authentication within an existing sign-in flow. In an effort to boost security we as a product team want to require all users to go through an SMS-based two-factor authentication flow on login. As a user I should be prompted to enter a 4-digit PIN code after login. When I enter the correct PIN I should be taken into my account. When I enter an incorrect PIN I should be notified of the error. Until a user has completed the two-factor authentication, they should not be able to do anything else within the application.
