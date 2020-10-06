@@ -11,17 +11,11 @@ const PinForm = (props) => {
   const history = useHistory()
   const { handleSubmit, register, errors, setError } = useForm()
 
-  // TODO: Pass the creds thru to here instead of using SessionStorage.
-  // console.log(props.creds)
-  // console.log(props.location.state.creds)
-
   const onSubmit = async (values) => {
     if (values.pin === "1111") {
       // Hardcoded for now ^ per spec.
-      let creds = JSON.parse(sessionStorage.getItem("tmp"))
-
       try {
-        const data = await createSession(creds)
+        const data = await createSession(props.creds.location.creds)
 
         if (data && data.error) {
           setError("password", {
@@ -40,7 +34,6 @@ const PinForm = (props) => {
         message: "Invalid PIN",
       })
     }
-    sessionStorage.removeItem("tmp")
   }
 
   function onCancel(e) {

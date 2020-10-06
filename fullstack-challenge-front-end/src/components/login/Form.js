@@ -31,8 +31,6 @@ const LoginForm = () => {
           message: data.error,
         })
       } else {
-        sessionStorage.setItem("tmp", JSON.stringify(values))
-
         if (rememberMeChk) {
           // "Remember Device" cookie detected. Skip the MFA. Log them in.
           const session = await createSession(values)
@@ -43,18 +41,13 @@ const LoginForm = () => {
               message: session.error,
             })
           } else {
-            sessionStorage.removeItem("tmp")
             history.push("/users")
           }
         } else {
           // "Remember Device" cookie not detected. Get PIN.
-
           history.push({
             pathname: "/pin",
-            props: {
-              creds: values,
-            },
-            // ^ Attempt at passing creds thru.
+            creds: values,
           })
         }
       }

@@ -22,4 +22,3 @@ If the "Remember Device" checkbox was checked, the Rails app creates a cookie to
 ### Future Consideration
 
 * **Cypress Tests**
-* **Refactor away SessionStorage and use React props.** The user's UN and PW had to be stored somewhere client-side, because we've broken a normally 1-step operation into 2 steps. We have to hold their UN and PW client-side, and ensure they aren't logged in until the MFA-code succeeds. I was wheel-spinning getting Props to pass to a page called by history.push. So I quickly went with serializing their Creds into SessionStorage. Although my code does remove that immediately after it's done, and it automatically goes away when they close their browser tab or leave the site.
